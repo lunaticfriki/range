@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #111111;
+  --white: #eae8e8;
+  --primary: #b02ac4;
+  --background: #8c147e;
+  --dark-primary: #4b0843;
+  --hover: #e957bb;
+}
+
+* {
+  @apply m-0 box-border p-0 leading-6;
+}
+
+body {
+  @apply bg-[var(--black)] text-[var(--white)];
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  @apply text-[var(--primary)];
+}
+
+a {
+  @apply text-[var(--white)] transition-all hover:text-[var(--primary)];
+}
+
+.layout {
+  @apply grid min-h-screen grid-rows-[5rem,1fr,auto];
+}
+
+.centered {
+  @apply grid h-full w-full place-content-center place-items-center;
+}
+
+.range-slider-container {
+  @apply flex h-[50px] w-full;
+}
+
+.range-container {
+  @apply relative mt-[20px] h-[5px] w-[300px] bg-[var(--background)];
+}
+
+.slider {
+  @apply absolute top-[50%] z-20 h-[30px] w-[10px] translate-y-[-50%] cursor-grabbing bg-[var(--primary)] hover:bg-[var(--hover)];
+}
+
+.input {
+  @apply my-2 border-2 border-[var(--primary)] bg-transparent p-2;
+}
+
+.value {
+  @apply mx-6 flex h-full w-[50px] items-center justify-center;
+}
